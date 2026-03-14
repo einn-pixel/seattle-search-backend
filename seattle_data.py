@@ -145,10 +145,44 @@ def get_location(location_id):
     return seattle_locations.get(location_id)
 
 def search_by_keyword(keyword):
-     # VERSI DEBUG: Return semua ID untuk test
-    print("=" * 50)
-    print(f"🔍 DEBUG: search_by_keyword dipanggil dengan keyword: {keyword}")
-    all_ids = list(seattle_locations.keys())
-    print(f"📊 Mengembalikan semua ID: {all_ids}")
-    print("=" * 50)
-    return all_ids
+    keyword = keyword.lower().strip()
+    results = []
+    
+    for loc_id, location in seattle_locations.items():
+        # Cek di name
+        if keyword in location['name'].lower():
+            results.append(loc_id)
+            continue
+            
+        # Cek di category
+        if keyword in location['category'].lower():
+            results.append(loc_id)
+            continue
+            
+        # Cek di description
+        if keyword in location['description'].lower():
+            results.append(loc_id)
+            continue
+        
+        # Cek di field lainnya
+        for key, value in location.items():
+            # Skip field yang bukan tempat pencarian
+            if key in ['name', 'category', 'description', 'neighbors', 'coordinates']:
+                continue
+                
+            # Kalau value string
+            if isinstance(value, str) and keyword in value.lower():
+                results.append(loc_id)
+                break
+                
+            # Kalau value list
+            elif isinstance(value, list):
+                for item in value:
+                    if isinstance(item, str) and keyword in item.lower():
+                        results.append(loc_id)
+                        break
+                if loc_id in results:
+                    break
+    
+    # Hapus duplikat dan return
+    return list(dict.fromkeys(results))
