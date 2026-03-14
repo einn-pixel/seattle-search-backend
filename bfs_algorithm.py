@@ -27,14 +27,24 @@ class BFSGraph:
                 visited.add(current_node)
                 
                 location = self.locations.get(current_node, {})
-                if (not target_keyword or 
-                    target_keyword.lower() in location.get('name', '').lower() or
-                    target_keyword.lower() in location.get('category', '').lower()):
+                    keyword_match = False
+                if not target_keyword:
+                     keyword_match = True
+                else:
+                     keyword = target_keyword.lower()
+
+                for key, value in location.items():
+                  if isinstance(value, str) and keyword in value.lower():
+                     keyword_match = True
+                     break
+
+                if keyword_match:
                     results.append({
-                        'location_id': current_node,
-                        'location_data': location,
-                        'path': path.copy(),
-                        'depth': depth
+                    'location_id': current_node,
+                    'location_data': location,
+                    'path': path.copy(),
+                    'depth': depth
+                        
                     })
                 
                 for neighbor in self.graph.get(current_node, []):
