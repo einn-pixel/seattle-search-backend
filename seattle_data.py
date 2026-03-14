@@ -4,7 +4,7 @@ seattle_locations = {
         "name": "Seattle - The Emerald City",
         "category": "city",
         "description": "Kota terbesar di Washington State, AS. Pusat teknologi (Microsoft, Amazon), kopi (Starbucks), dan musik grunge (Nirvana). Dikenal dengan landmark Space Needle dan Pike Place Market.",
-        "neighbors": ["bellevue", "redmond", "tacoma", "seatac_airport", "pike_place", "space_needle", "seattle_center", "waterfront", "capitol_hill", "queen_anne", "chinatown", university_district", "fremont", "ballard"],
+        "neighbors": ["bellevue", "redmond", "tacoma", "seatac_airport", "pike_place", "space_needle", "waterfront", "capitol_hill", "queen_anne"],
         
        
         "area": "217.2 km²",
