@@ -7,7 +7,7 @@ class SeattleSearchEngine:
         self.locations = get_all_locations()
         self.bfs_graph = BFSGraph(self.locations)
     
-    def keyword_search(self, keyword, use_bfs=True, start_node='downtown'):
+    def keyword_search(self, keyword, use_bfs=True, start_node='seattle'):
         start_time = time.time()
         
         if use_bfs:
