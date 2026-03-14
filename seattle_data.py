@@ -1,96 +1,142 @@
 # Data 15 tempat di Seattle
 seattle_locations = {
-    "downtown": {
-        "name": "Downtown Seattle",
-        "category": "district",
-        "description": "Pusat kota Seattle dengan gedung pencakar langit",
-        "neighbors": ["pike_place", "waterfront", "capitol_hill"]
+    "seattle": {
+        "name": "Seattle - The Emerald City",
+        "category": "city",
+        "description": "Kota terbesar di Washington State, AS. Pusat teknologi (Microsoft, Amazon), kopi (Starbucks), dan musik grunge (Nirvana). Dikenal dengan landmark Space Needle dan Pike Place Market.",
+        "neighbors": ["bellevue", "redmond", "tacoma", "seatac_airport"],
+        
+       
+        "area": "217.2 km²",
+        "population": "780,995 jiwa (2024)",
+        "nicknames": "Emerald City, Jet City, Rain City",
+        "industries": "Teknologi, Aerospace, Kopi",
+        "landmarks": "Space Needle, Pike Place Market",
+        "climate": "Oceanic, suhu rata-rata 11°C",
+        "timezone": "Pacific Time (PST/PDT)",
+        "universities": "University of Washington",
+        "coordinates": "47.6062° N, 122.3321° W",
+        "coffee": "Starbucks, Seattle's Best Coffee",
+        "fun_facts": "Tempat lahir musik grunge",
+        "founded": "1851",
+        "other_nicknames": "Queen City",
+        "food": "Salmon, Oyster",
+        "transportation": "Light Rail, Ferries"
     },
+    
+    "bellevue": {
+        "name": "Bellevue",
+        "category": "city",
+        "description": "Kota satelit di timur Seattle. Pusat teknologi dengan kantor T-Mobile.",
+        "neighbors": ["seattle", "redmond"],
+        "population": "151,854 jiwa",
+        "area": "87.2 km²",
+        "industries": "Teknologi, Ritel"
+    },
+    
+    "redmond": {
+        "name": "Redmond",
+        "category": "city",
+        "description": "Kota di timur Seattle, markas besar Microsoft dan Nintendo.",
+        "neighbors": ["seattle", "bellevue"],
+        "population": "76,104 jiwa",
+        "area": "43.8 km²",
+        "industries": "Teknologi (Microsoft), Gaming (Nintendo)"
+    },
+    
+    "tacoma": {
+        "name": "Tacoma",
+        "category": "city",
+        "description": "Kota pelabuhan di selatan Seattle. Dijuluki 'City of Destiny'.",
+        "neighbors": ["seattle"],
+        "population": "219,346 jiwa",
+        "area": "162.2 km²",
+        "industries": "Pelabuhan, Manufaktur"
+    },
+    
+    "seatac_airport": {
+        "name": "Seattle-Tacoma International Airport",
+        "category": "airport",
+        "description": "Bandara utama Seattle (SEA).",
+        "neighbors": ["seattle", "tacoma"],
+        "code": "SEA",
+        "passengers": "50+ juta/tahun"
+    },
+    
     "pike_place": {
         "name": "Pike Place Market",
         "category": "tourist_attraction",
-        "description": "Pasar terkenal dengan ikan terbang",
-        "neighbors": ["downtown", "waterfront"]
+        "description": "Pasar terkenal dengan ikan terbang dan Starbucks pertama.",
+        "neighbors": ["seattle", "waterfront"],
+        "established": "1907"
     },
+    
     "space_needle": {
         "name": "Space Needle",
         "category": "landmark",
-        "description": "Menara ikonik Seattle",
-        "neighbors": ["seattle_center", "queen_anne"]
+        "description": "Menara ikonik Seattle, dibangun 1962.",
+        "neighbors": ["seattle", "seattle_center"],
+        "height": "184 meter"
     },
+    
     "seattle_center": {
         "name": "Seattle Center",
         "category": "entertainment",
-        "description": "Pusat hiburan dengan Space Needle",
-        "neighbors": ["space_needle", "queen_anne"]
+        "description": "Pusat hiburan dengan Space Needle dan museum.",
+        "neighbors": ["space_needle", "seattle"]
     },
+    
     "waterfront": {
         "name": "Waterfront Park",
         "category": "park",
-        "description": "Kawasan tepi laut",
-        "neighbors": ["downtown", "pike_place"]
+        "description": "Kawasan tepi laut dengan pemandangan indah.",
+        "neighbors": ["seattle", "pike_place"]
     },
+    
     "capitol_hill": {
         "name": "Capitol Hill",
         "category": "neighborhood",
-        "description": "Area trendi dengan banyak kafe",
-        "neighbors": ["downtown", "first_hill"]
+        "description": "Area trendi dengan banyak kafe dan bar.",
+        "neighbors": ["seattle", "downtown"]
     },
+    
     "queen_anne": {
         "name": "Queen Anne",
         "category": "neighborhood",
-        "description": "Area perumahan dengan pemandangan kota",
-        "neighbors": ["space_needle", "seattle_center"]
+        "description": "Area perumahan dengan pemandangan kota.",
+        "neighbors": ["seattle", "space_needle"]
     },
+    
     "chinatown": {
-        "name": "Chinatown",
+        "name": "Chinatown-International District",
         "category": "district",
-        "description": "Kawasan budaya dengan restoran Asia",
-        "neighbors": ["downtown", "soho"]
+        "description": "Kawasan budaya dengan restoran Asia.",
+        "neighbors": ["seattle", "pioneer_square"]
     },
+    
     "university_district": {
         "name": "University District",
         "category": "neighborhood",
-        "description": "Area sekitar University of Washington",
-        "neighbors": ["ravenna", "wallingford"]
+        "description": "Area sekitar University of Washington.",
+        "neighbors": ["seattle", "ravenna"]
     },
+    
     "fremont": {
         "name": "Fremont",
         "category": "neighborhood",
-        "description": "Area unik dengan patung troll",
-        "neighbors": ["ballard", "wallingford"]
+        "description": "Area unik dengan patung troll.",
+        "neighbors": ["seattle", "ballard"]
     },
+    
     "ballard": {
         "name": "Ballard",
         "category": "neighborhood",
-        "description": "Area dengan restoran seafood",
-        "neighbors": ["fremont"]
-    },
-    "wallingford": {
-        "name": "Wallingford",
-        "category": "neighborhood",
-        "description": "Area perumahan yang tenang",
-        "neighbors": ["fremont", "university_district"]
-    },
-    "ravenna": {
-        "name": "Ravenna",
-        "category": "neighborhood",
-        "description": "Area dengan taman yang indah",
-        "neighbors": ["university_district"]
-    },
-    "first_hill": {
-        "name": "First Hill",
-        "category": "neighborhood",
-        "description": "Area dengan banyak rumah sakit",
-        "neighbors": ["capitol_hill", "downtown"]
-    },
-    "soho": {
-        "name": "Soho",
-        "category": "neighborhood",
-        "description": "Area perbelanjaan",
-        "neighbors": ["chinatown"]
+        "description": "Area dengan restoran seafood.",
+        "neighbors": ["seattle", "fremont"]
     }
 }
+
+
 
 def get_all_locations():
     return seattle_locations
@@ -103,9 +149,20 @@ def search_by_keyword(keyword):
     results = []
     
     for loc_id, location in seattle_locations.items():
-        if (keyword in location['name'].lower() or 
-            keyword in location['category'].lower() or 
-            keyword in location['description'].lower()):
+        if keyword in location['name'].lower():
             results.append(loc_id)
+
+        elif keyword in location['category'].lower():
+            results.append(loc_id)
+      
+        elif keyword in location['description'].lower():
+            results.append(loc_id)
+
+        else:
+            for key, value in location.items():
+                if key not in ['name', 'category', 'description', 'neighbors'] and isinstance(value, str):
+                    if keyword in value.lower():
+                        results.append(loc_id)
+                        break
     
-    return results
+    return list(dict.fromkeys(results))
