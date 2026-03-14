@@ -97,7 +97,7 @@ seattle_locations = {
         "name": "Capitol Hill",
         "category": "neighborhood",
         "description": "Area trendi dengan banyak kafe dan bar.",
-        "neighbors": ["seattle", "downtown"]
+        "neighbors": ["seattle"]
     },
     
     "queen_anne": {
@@ -111,28 +111,28 @@ seattle_locations = {
         "name": "Chinatown-International District",
         "category": "district",
         "description": "Kawasan budaya dengan restoran Asia.",
-        "neighbors": ["seattle", "pioneer_square"]
+        "neighbors": ["seattle"]
     },
     
     "university_district": {
         "name": "University District",
         "category": "neighborhood",
         "description": "Area sekitar University of Washington.",
-        "neighbors": ["seattle", "ravenna"]
+        "neighbors": ["seattle"]
     },
     
     "fremont": {
         "name": "Fremont",
         "category": "neighborhood",
         "description": "Area unik dengan patung troll.",
-        "neighbors": ["seattle", "ballard"]
+        "neighbors": ["seattle"]
     },
     
     "ballard": {
         "name": "Ballard",
         "category": "neighborhood",
         "description": "Area dengan restoran seafood.",
-        "neighbors": ["seattle", "fremont"]
+        "neighbors": ["seattle"]
     }
 }
 
