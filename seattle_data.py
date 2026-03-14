@@ -151,18 +151,26 @@ def search_by_keyword(keyword):
     for loc_id, location in seattle_locations.items():
         if keyword in location['name'].lower():
             results.append(loc_id)
-
-        elif keyword in location['category'].lower():
+            continue
+        if keyword in location['category'].lower():
             results.append(loc_id)
-      
-        elif keyword in location['description'].lower():
+            continue
+        if keyword in location['description'].lower():
             results.append(loc_id)
+            continue
 
-        else:
-            for key, value in location.items():
-                if key not in ['name', 'category', 'description', 'neighbors'] and isinstance(value, str):
-                    if keyword in value.lower():
+        for key, value in location.items():
+            if key in ['name', 'category', 'description', 'neighbors', 'coordinates']:
+                continue
+            if isinstance(value, str) and keyword in value.lower():
+                results.append(loc_id)
+                break
+            elif isinstance(value, list):
+                for item in value:
+                    if isinstance(item, str) and keyword in item.lower():
                         results.append(loc_id)
                         break
-    
+                if loc_id in results:
+                    break
+
     return list(dict.fromkeys(results))
